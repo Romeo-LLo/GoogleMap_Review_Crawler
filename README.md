@@ -54,12 +54,11 @@ while True:
 
 ```
 all_rates = []
-total_rate = 0
 response = BeautifulSoup(driver.page_source, 'html.parser')
 all_reviews = response.find_all('div', class_='jftiEf fontBodyMedium')
 for index, review in enumerate(all_reviews):
     rate = float(review.find(class_="kvMYJc")['aria-label'].split(' ')[1])
-    total_rate += rate
     all_rates.append(rate)
     
 ```
+6. Done! All rates are saved in the list.
