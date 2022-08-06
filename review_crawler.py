@@ -34,9 +34,7 @@ time.sleep(3)
 
 
 SCROLL_PAUSE_TIME = 1.0
-
 scrolling_element_xpath  = '/html/body/div[3]/div[9]/div[9]/div/div/div[1]/div[2]/div/div[1]/div/div/div[2]'
-
 scrolling_element = driver.find_element(By.XPATH, scrolling_element_xpath)    
 driver.execute_script("return arguments[0].scrollHeight", scrolling_element)
 time.sleep(SCROLL_PAUSE_TIME)   
